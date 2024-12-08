@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutors Listing</title>
+    <<link rel="stylesheet" type="text/css" href="findtutorcss.css"/> 
+    
+</head>
+<body>
+
+    <div id="header">
+        <div class="left_section">
+          <h1>
+            <a href="homepage.html" target="_self">MY WEBSITE ACADEMIA</a>
+          </h1>
+        </div>
+        <div class="center_section1">
+            <a id="button" role="button" href="homepage.html">Pricing</a> 
+            <a id="button" role="button" href="homepage.html">Subjects</a> 
+            <a id="button" role="button" href="aboutmwa.html">About us</a>          
+        </div>
+        <div class="right_section">
+            <a id="button1" role="button" href="findtutor.html">Find a Tutor</a>
+            <a id="button2" role="button" href="becomeatutor.html">Become a Tutor</a>   
+        </div>
+      </div>
+
+      
+      <div class="container">
+        
+        <div class="filter-section">
+          <h3>Filter</h3>
+          <label><input type="checkbox" value="In-person" class="filter-checkbox"> In-person</label>
+          <label><input type="checkbox" value="Online" class="filter-checkbox"> Online</label>
+          <label><input type="checkbox" value="Licence" class="filter-checkbox"> Licence</label>
+          <label><input type="checkbox" value="Non-licence" class="filter-checkbox"> Non-licence</label>
+          <label><input type="checkbox" value="Tutors with experience" class="filter-checkbox"> Tutors with experience</label>
+          <label><input type="checkbox" value="Bronze" class="filter-checkbox"> Professor</label>
+          <label><input type="checkbox" value="Silver" class="filter-checkbox"> Special Education Teacher</label>
+          <label><input type="checkbox" value="Gold" class="filter-checkbox"> High School Teacher</label>
+          <label><input type="checkbox" value="Pro" class="filter-checkbox"> Elementary School Teacher</label>
+          <button onclick="clearFilters()">Clear all</button>
+        </div>
+
+        <div class="main-content" id="tutorList">
+            <div class="search-bar">
+                <h1 class="ty">Tutors for You</h1>
+                <input type="text" id="subject" placeholder="Subject">
+                <input type="text" id="level" placeholder="Level">
+                <button onclick="searchTutors()">Search</button>
+                <button onclick="resetFilters()">Reset</button>
+              </div>
+              <div id="tutors-list">
+                
+            </div>
+            <div id="pagination-controls">
+                <button id="prev-button" disabled>Previous</button>
+                <button id="next-button">Next</button>
+            </div>
+          </div>
+        
+        <div class="ads-section">
+          <h3>Need help finding a tutor?</h3>
+          <button>Find me a tutor</button>
+          <p style="color: #FFECB3;">Call us on 1300 874 322</p>
+        </div>
+      </div>
+
+      <!-- Chat Button -->
+    <button class="chat-button" onclick="toggleChat()">
+      <span>Chat with Learnmate 👋</span>
+      <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15v-2H8v2h3zm4.5 0v-2h-2v2h2zm.5-4h-7V9h7v4z" />
+          </svg>
+      </div>
+  </button>
+
+  <!-- Chat Window -->
+  <div class="chat-window">
+      <div class="chat-header">
+          <h4>Hi there 👋</h4>
+          <button class="close-btn" onclick="toggleChat()">×</button>
+      </div>
+      <div class="chat-content">
+          <div class="message">
+              <img src="https://via.placeholder.com/40" alt="Tutor">
+              <div class="text">Welcome to Learnmate! How can we help you today?</div>
+          </div>
+          <div class="message">
+              <img src="https://via.placeholder.com/40" alt="Tutor">
+              <div class="text">We reply quickly!</div>
+          </div>
+      </div>
+      <div class="chat-footer">
+          <input type="text" placeholder="Enter your message...">
+          <button>
+              <!-- Send Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+              </svg>
+          </button>
+      </div>
+  </div>
+  <script>
+    function toggleChat() {
+        const chatWindow = document.querySelector('.chat-window');
+        chatWindow.classList.toggle('active');
+    }
+</script>
+      
+    <script src="findtutorjs.js"></script>
+</body>
+</html>
